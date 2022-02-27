@@ -18,9 +18,17 @@ repositories {
 	mavenCentral()
 }
 
+bootJar {
+	enabled = false
+}
+
+jar {
+	enabled = true
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
-	implementation group: 'org.axonframework', name: 'axon-spring-boot-starter', version: '4.5.7'
+	implementation group: 'org.axonframework', name: 'axon-spring-boot-starter', version: '4.5.8'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
